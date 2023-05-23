@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* variable for CSS style color */
+:root {
+  --main-color: #1b202a;
+  --primary-color: rgb(240, 240, 240);
+  --secondary-color: darkorange;
+  --hover-color: rgb(67, 187, 7);
+  --header-footer-color: #0b527c;
+}
+/* https://wallpapercave.com/dwp2x/wp2915550.jpg */
+/*  */
+body {
+  background-image: url("https://www.technocrazed.com/wp-content/uploads/2015/12/Earth-Wallpaper-133.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: var(--primary-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity (0.5) as needed */
+  z-index: -1;
+}
+#container {
+  margin: 0 auto;
+  width: 90%;
+}
+/* header */
+#user-header-interface {
+  /* background-color: var(--header-footer-color); */
+  padding: 1rem 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid var(--secondary-color);
+  margin: 0rem 0rem;
+}
+
+#user-header-interface .header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-header-interface .header-info .logo .material-symbols-outlined {
+  color: var(--secondary-color);
+}
+
+#user-header-interface .header-info button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  width: 5rem;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+  color: aliceblue;
+}
+.weekly-button {
+  opacity: 0;
+}
+#user-header-interface .header-info button:hover {
+  cursor: pointer;
+  border: 1px solid var(--hover-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+#user-header-interface .header-info .logo {
+  font-size: 1.2rem;
+}
+/* input */
+#weatherForm {
+  display: flex;
+  opacity: 0.9;
+}
+
+#user-input-city {
+  border-radius: 90px 0px 0px 90px;
+  width: 20rem;
+  padding: 0.9rem;
+  border: 2px solid var(--secondary-color);
+  font-size: 1.2rem;
+}
+#weatherForm button {
+  border-radius: 0px 90px 90px 0px;
+  width: 5rem;
+  background-color: aliceblue;
+  border: none;
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+}
+#weatherForm button:hover {
+  background-color: var(--secondary-color);
+  border: none;
+}
+/* current-update */
+#current-update {
+  margin-top: 0.5rem;
+}
+/* user-main-interface  */
+#user-main-interface {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#user-main-interface #weatherForm {
+}
+
+#user-main-interface .temp-input-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+#user-main-interface .city-name-location {
+  display: flex;
+  justify-content: center;
+}
+
+#user-main-interface .city-time-info {
+  text-align: center;
+}
+
+/* #current-temp {
+  position: absolute;
+  top: 3rem;
+} */
+
+.temp-icon img {
+  height: 140px;
+  width: 140px;
+}
+/* user-current-weather-info-interface */
+#user-current-weather-info-interface {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.ul-element-current-weather {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.li-element-current-weather {
+  padding-left: 1rem;
+}
+/* user-hourly-weather-interface */
+
+#user-hourly-weather-interface {
+  background-color: rgb(61, 62, 62);
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
+  width: 30%;
+  right: 1.9rem;
+}
+
+.hour-container {
+  padding: 0.1rem 0.8rem;
+  border-bottom: 1px solid var(--primary-color);
+  margin: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-icon {
+  height: 30px;
+}
+/* user-weekly-weather-interface */
+#user-weekly-weather-interface {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.8;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.day-container {
+  padding: 0.6rem 0rem;
+  background-color: rgb(58, 60, 59);
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  /* justify-content: space-between; */
+}
+
+.day-container img {
+  height: 50px;
+}
+.high-temperature,
+.low-temperature {
+  font-weight: bold;
+  color: rgb(214, 203, 189);
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(200, 129, 30, 0.845);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--secondary-color);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 640px) {
+  body {
+    background-position: top;
+  }
+  /* header */
+
+  #user-header-interface {
+    /* background-color: var(--header-footer-color); */
+    padding: 1rem 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1.5px solid var(--secondary-color);
+    margin: 0rem;
+  }
+  #user-header-interface .header-info button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 4rem;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    color: aliceblue;
+  }
+
+  #user-input-city {
+    width: 13rem;
+  }
+  #weatherForm button {
+    width: 4rem;
+  }
+
+  .weekly-button {
+    opacity: 1;
+  }
+  /* user-main-interface  */
+  #user-main-interface {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #user-main-interface .temp-input-icon {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  #user-main-interface .city-name-location {
+    display: flex;
+    justify-content: center;
+  }
+
+  #user-main-interface .city-time-info {
+    text-align: center;
+  }
+
+  #current-temp {
+    font-size: 3rem;
+  }
+
+  .temp-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .temp-icon img {
+    height: 140px;
+    width: 140px;
+  }
+
+  /* user-weekly-weather-interface */
+  #user-weekly-weather-interface {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    background-color: rgb(58, 60, 59);
+    justify-content: space-around;
+    opacity: 1;
+    width: 100%;
+    margin-top: 3rem;
+    left: 0;
+  }
+
+  .day-container {
+    padding: 0.2rem 0.4rem;
+
+    border-bottom: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* justify-content: space-between; */
+  }
+
+  .day-container img {
+    height: 50px;
+  }
+  .high-temperature,
+  .low-temperature {
+    font-weight: bold;
+    color: rgb(214, 203, 189);
+  }
+  /* user-hourly-weather-interface */
+
+  #user-hourly-weather-interface {
+    top: 3.8rem;
+    width: 100%;
+    right: 0;
+  }
+
+  .hour-container {
+    margin: 0.1rem;
+  }
+
+  .weather-icon {
+    height: 32px;
+  }
+
+  /* user-current-weather-info-interface */
+  #user-current-weather-info-interface {
+    margin-top: 3rem;
+  }
+
+  .ul-element-current-weather {
+    width: 50%;
+  }
+
+  .li-element-current-weather {
+    padding-bottom: 0.6rem;
+  }
+}
