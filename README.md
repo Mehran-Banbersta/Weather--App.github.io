@@ -66,5 +66,5 @@ This is a simple weather application that allows users to get weather informatio
 
 - `index.js`: This file is the entry point for the application and is responsible for rendering the root component.
 
-- `README.md`: This file contains documentation and information about the codebase.
+
 
