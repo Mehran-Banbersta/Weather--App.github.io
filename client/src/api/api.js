@@ -34,7 +34,7 @@ export async function initApi(userInputCity) {
       const typeError = document.getElementById("type-error");
       const pEl = document.createElement("p");
       typeError.appendChild(pEl);
-      pEl.textContent = "Invalid city name. Please enter a valid city name.";
+      pEl.textContent = "Please enter a valid city name.";
     }
   } catch (error) {
     console.error("Error fetching weather data:", error);
