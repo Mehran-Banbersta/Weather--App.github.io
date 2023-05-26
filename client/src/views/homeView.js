@@ -37,6 +37,7 @@ export const createMainElement = () => {
   const element = Object.assign(document.createElement("div"), {});
   element.innerHTML = String.raw`
 <section class='temp-input-icon'>
+    <div class="input-error-element">
         <form id="weatherForm">
               <input type="text"
                 id="${USER_INPUT_CITY_ID}"
@@ -46,9 +47,11 @@ export const createMainElement = () => {
               <button id='${SEARCH_BUTTON_ID}' type="submit">
                 <span class="material-symbols-outlined"> my_location </span>
               </button>
+            
         </form>
           <!-- type-error -->
-        <div id="${TYPE_ERROR_ID}"></div>
+          <div id="${TYPE_ERROR_ID}"></div>
+    </div>  
             <!--  -->
             <div class="temp-icon">
                   <h2 id="${CURRENT_TEMP_ID}"></h2>
