@@ -19,7 +19,7 @@ export async function initApi(userInputCity) {
       const currentTemp = `${data.current.temp_c}°`;
       const cityName = data.location.name;
       const weatherIcon = data.current.condition.icon;
-      const weatherDate = data.current.last_updated;
+      const weatherDate = `Last updated: ${data.current.last_updated}`;
 
       updateWeatherDisplay(cityName, currentTemp, weatherIcon, weatherDate);
       const typeError = document.getElementById("type-error");
