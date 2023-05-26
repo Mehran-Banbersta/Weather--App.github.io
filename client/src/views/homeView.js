@@ -67,7 +67,8 @@ export const createMainElement = () => {
           </div>
           <h2 id="${CITY_NAME_ID}"></h2>
         </div>
-        <div class='current-update' id="${CURRENT_UPDATE_ID}"></div>
+        <div class='current-update' id="${CURRENT_UPDATE_ID}"></h4>
+        </div>
       </div>
     
   `;
